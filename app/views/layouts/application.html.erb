@@ -6,101 +6,28 @@
 
         <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
         <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-        <style>
-            .navbar-fixed-top {
-                }
-            .navbar-show {
-                height: 100%;
-                background: rgba(179, 184, 185, 0.95) none repeat scroll 0 0;
-            }
 
-            #nav-about {
-                display: none;
-            }
 
-            .navbar-show #nav-about {
-                display: block;
-            }
-
-        </style>
-
-        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
-        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">
+    
 
     </head>
 
+
+
     <body>
 
-        <header>
-            <div class="logo-top">
-                <div class="text-center">
-                    <%= image_tag "greenup.png", class:"logo" %>
-                </div>
-            </div>
-
-            <!-- Begin Navigation -->
-            <nav class="navbar navbar-default navbar-fixed-top">
-                <div class="container-fluid">
-                    <div class="row">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-
-                            <div class="profile">
 
 
 
-                            </div>
-                        </div>
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-              						<ul class="nav navbar-nav navbar-right">
-              							<li><a href="#about" data-id="about" class="scroll-link">About</a></li>
-              							<li><a href="#work" data-id="work" class="scroll-link">Projects</a></li>
-              						</ul>
-              					</div><!-- /.navbar-collapse -->
-                    </div>
-                </div>
-                <div id="nav-about"></div>
-            </nav>
-
-
-
-
-
-        </header>
-
-<div class="contactme">
+  <% if false %>
   <%= link_to "https://github.com/StevenGreenup" do %><%= image_tag "Github.png", class:"social" %><% end %> <br>
   <%= link_to "https://www.linkedin.com/in/steven-greenup-70b09038" do %><%= image_tag "Linkedin.png", class:"social" %><% end %> <br>
   <%= link_to "https://twitter.com/GREEEN_UP" do %><%= image_tag "Twitter.png", class:"social" %><% end %> <br>
   <%= link_to "mailto:greenup.steven@gmail.com" do %><%= image_tag "mail.png", class:"social" %><% end %>
+  <% end %>
 
-</div>
         <%= yield %>
-        <!-- Begin Footer -->
-        <footer class="footer-padding">
-            <div class="container">
 
-                <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2 text-small text-center">
-                        <hr>
-                        <p class="no-margin">&copy; Steven Greenup</p>
-                    </div>
-                    <!-- /.column -->
-                </div>
-                <!-- /.row -->
-            </div>
-            <!-- /.container -->
-        </footer>
-        <!-- /.footer -->
-        <!-- Begin Footer -->
     </body>
 </html>

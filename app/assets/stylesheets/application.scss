@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
-@import "bootstrap";
 @import "homepage";
-
-@import "style";
-@import "green";
+@import "bootstrap.min";
+@import "bootstrap-modal-carousel";
+@import "animated-text";
+@import "custom";
+@import "owl.carousel";
+@import "owl.theme";
+@import "owl.transitions";
+@import "animate";

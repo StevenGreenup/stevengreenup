@@ -12,14 +12,17 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require bootstrap
-//= require homepage
-//= require jquery.inview.min
-//= require jquery.magnific-popup.min
-//= require jquery.mixitup
-//= require main
-//= require parallax.min
-//= require scrollreveal.min
-
-
+//= require turbolinks
+//= require jquery-1.11.1.min
+//= require bootstrap.min
+//= require jquery.easing.1.3.min
+//= require appear.js
+//= require bootstrap-progressbar.min
+//= require owl.carousel.min
+//= require jquery.mixitup.min
+//= require waypoints.min
+//= require jquery.counterup.min
+//= require animated-jquery
+//= require wow.min.js
+//= require custom
 //= require_tree .
