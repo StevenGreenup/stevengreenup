@@ -285,7 +285,7 @@ a.custom-btn-1:focus {
 /* ====================================== */
 
 header {
-  background-image: url(greenup3d.jpg);
+  background-image: asset_url(greenup3d.jpg);
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -496,7 +496,7 @@ header .row {
 /* ====================================== */
 
 #quotes {
-  background-image: url("modern-wallpaper-13.jpg");
+  background-image: asset_url("modern-wallpaper-13.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -667,7 +667,7 @@ header .row {
 
 #cta {
   background-attachment: fixed;
-  background-image: url("modern-wallpaper-13.jpg");
+  background-image: asset_url("modern-wallpaper-13.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   padding: 40px 0px;
