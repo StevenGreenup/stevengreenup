@@ -212,7 +212,44 @@
 				<div class="quotes-overlay"></div>
 				<div class="row">
 					<div class="col-md-8 col-md-push-2 text-center">
-						<h2>“A great pleasure in life is doing what people say you cannot do.” ~ Walter Gagehot</h2>
+
+
+
+
+
+				<div class="fade-quote-carousel carousel slide" id="quote-carousel" data-ride="carousel" data-interval="5000">
+					<!-- Carousel indicators -->
+
+					<!-- Carousel items -->
+					<div class="carousel-inner">
+						<div class="active item">
+								<p>
+									<h3 class="white">
+										“A great pleasure in life is doing what people say you cannot do.” <br>~ Walter Gagehot
+									</h3>
+								</p>
+						</div>
+						<div class="item">
+								<p>
+									<h3 class="white">
+										“Lack of time is actually lack of priorities.”<br>~ Tim Ferriss
+								</h3>
+								</p>
+						</div>
+						<div class="item">
+								<p>
+									<h3 class="white">
+										"Nobody really cares if you're miserable, so you might as well be happy."<br>~Cynthia Nelms
+								</h3>
+								</p>
+						</div>
+					</div>
+
+				</div><!-- /.carousel -->
+
+
+
+
 					</div>
 				</div>
 			</div>
@@ -240,27 +277,27 @@
 						<% end %>
     				<div id="portfolio-items" class="col-xs-12">
     					<div class="row">
-		    				<div class="col-md-3 col-xs-12 mix brand" data-myorder="1">
-		    					<a href="https://interview-prepp.herokuapp.com/#contact" data-toggle="modal" data-target="#portfolio1">
+		    				<div class="col-md-4 col-xs-12 mix brand" data-myorder="1">
+		    					<a href="https://interview-prepp.herokuapp.com" data-toggle="modal" data-target="#portfolio1">
 		    						<div class="img-wrap">
 		    								<%= image_tag "intprep.png", class:"img-responsive center-block" %>
 		    							<div class="img-overlay"></div>
 		    						</div>
 		    					</a>
 		    				</div>
-		    				<div class="col-md-3 col-xs-12 mix logo" data-myorder="2">
-		    					<a href="#" data-toggle="modal" data-target="#portfolio1">
+		    				<div class="col-md-4 col-xs-12 mix brand" data-myorder="2">
+		    					<a href="https://feauxtwitter.herokuapp.com" data-toggle="modal" data-target="#portfolio2">
 		    						<div class="img-wrap">
 
-		    							<img src="assets/img/portfolio/portfolio02.jpg" alt="" class="img-responsive center-block">
-		    							<div class="img-overlay"></div>
+											<%= image_tag "feauxtwitter.png", class:"img-responsive center-block" %>
+			    							<div class="img-overlay"></div>
 		    						</div>
 		    					</a>
 		    				</div>
-		    				<div class="col-md-3 col-xs-12 mix print" data-myorder="3">
-		    					<a href="#" data-toggle="modal" data-target="#portfolio1">
+		    				<div class="col-md-4 col-xs-12 mix print" data-myorder="3">
+									<a href="https://thebookemporium.herokuapp.com/" data-toggle="modal" data-target="#portfolio3">
 		    						<div class="img-wrap">
-		    							<img src="assets/img/portfolio/portfolio03.jpg" alt="" class="img-responsive center-block">
+											<%= image_tag "book.png", class:"img-responsive center-block" %>
 		    							<div class="img-overlay"></div>
 		    						</div>
 		    					</a>
@@ -365,6 +402,109 @@
             </div>
             <!-- END: Portfolio1 fullscreen modal -->
 
+						<!-- Portfolio1 fullscreen modal -->
+									<div id="portfolio2" class="modal fade modal-fullscreen force-fullscreen" tabindex="-1" role="dialog" aria-hidden="true">
+								<div class="modal-dialog">
+									<div class="modal-content">
+											<div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<div class="modal-title">
+														<div class="container">
+															<div class="row">
+																<div class="col-md-12">
+																	<h2>Project Details</h2>
+																</div>
+															</div>
+														</div>
+													</div>
+
+											</div>
+											<div class="modal-body">
+
+												<div class="container">
+													<div class="row top-margin">
+														<div class="col-md-4">
+															<%= image_tag "feauxtwitter.png", class:"img-responsive center-block" %>
+														</div>
+														<div class="col-md-8">
+															<h3>Feaux Twitter</h3>
+															<p>Independent Project <br> <%= link_to "https://feauxtwitter.herokuapp.com", "https://feauxtwitter.herokuapp.com" %>	</p>
+															<h3>Description -</h3>
+
+															<p>Feaux Twitter is a simple twitter application. This project helped me learn about authentication and authorization. This application you're able to follow users and see thier posts. I really enjoyed working on this project.</p>
+															<h3>Tech Used -</h3>
+															<p>Ruby on Rails, Twitter Gem</p>
+														</div>
+													</div>
+												</div>
+
+											</div>
+											<div class="modal-footer">
+												<div class="container">
+													<div class="row">
+														<div class="col-md-12">
+															<button type="button" class="btn custom-btn-2 pull-left" data-dismiss="modal">Close</button>
+														</div>
+													</div>
+												</div>
+											</div>
+									</div>
+								</div>
+									</div>
+									<!-- END: Portfolio1 fullscreen modal -->
+
+									<!-- Portfolio1 fullscreen modal -->
+												<div id="portfolio3" class="modal fade modal-fullscreen force-fullscreen" tabindex="-1" role="dialog" aria-hidden="true">
+											<div class="modal-dialog">
+												<div class="modal-content">
+														<div class="modal-header">
+																<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+																<div class="modal-title">
+																	<div class="container">
+																		<div class="row">
+																			<div class="col-md-12">
+																				<h2>Project Details</h2>
+																			</div>
+																		</div>
+																	</div>
+																</div>
+
+														</div>
+														<div class="modal-body">
+
+															<div class="container">
+																<div class="row top-margin">
+																	<div class="col-md-4">
+																		<%= image_tag "book.png", class:"img-responsive center-block" %>
+																	</div>
+																	<div class="col-md-8">
+																		<h3>Book Emporium</h3>
+																		<p>Independent Project <br> <%= link_to "https://thebookemporium.herokuapp.com/", "https://thebookemporium.herokuapp.com/" %>	</p>
+																		<h3>Description -</h3>
+
+																		<p>This project helped me learn how to maintain a database. This was my first expeirence with relational databases in PostgreSQL.</p>
+																		<h3>Tech Used -</h3>
+																		<p>Ruby on Rails</p>
+																	</div>
+																</div>
+															</div>
+
+														</div>
+														<div class="modal-footer">
+															<div class="container">
+																<div class="row">
+																	<div class="col-md-12">
+																		<button type="button" class="btn custom-btn-2 pull-left" data-dismiss="modal">Close</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+												</div>
+											</div>
+												</div>
+												<!-- END: Portfolio1 fullscreen modal -->
+
+
 		</section>
 		<!-- END: Portfolio -->
 <% if false %>
@@ -406,7 +546,7 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div class="row">
 							<div class="col-sm-3">
-								<img src="assets/img/company/01.png" alt="" class="img-responsive center-block">
+								<img src="http://john.do/wp-content/uploads/2013/12/the-iron-yard-logo.png" alt="" class="img-responsive center-block">
 							</div>
 							<div class="col-sm-9">
 								<div class="border-style wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
@@ -425,7 +565,7 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div class="row">
 							<div class="col-sm-3">
-								<img src="assets/img/company/02.png" alt="" class="img-responsive center-block">
+								<img src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAVzAAAAJDFlNGRkOWU2LWZlZWQtNGNiNy1hMTYyLWVmOGFiZWFiMWZmNg.png" alt="" class="img-responsive center-block">
 							</div>
 							<div class="col-sm-9">
 								<div class="border-style wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
@@ -443,7 +583,7 @@
 					<div class="col-md-10 col-md-offset-1">
 						<div class="row">
 							<div class="col-sm-3">
-								<img src="assets/img/company/03.png" alt="" class="img-responsive center-block">
+								<img src="http://nmml.org/images_logos/pl/28_l.jpg" alt="" class="img-responsive center-block">
 							</div>
 							<div class="col-sm-9">
 								<div class="border-style wow fadeInDown" data-wow-duration="1s" data-wow-delay=".5s">
@@ -486,7 +626,7 @@
 							<span class="year">2013</span>
 						</div>
 						<div class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".5s">
-							<h3 class="sub-icon"><span class="ti-book"></span>Bachelors of Science in <br> Civil Engineering</h3>
+							<h3 class="sub-icon"><span class="ti-book"></span>Bachelors of Science in Civil Engineering</h3>
 							<h4>Texas Tech University</h4>
 							<p>Only the best University in the world. Guns Up!</p>
 						</div>
