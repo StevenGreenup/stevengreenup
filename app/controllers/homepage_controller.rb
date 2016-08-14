@@ -14,4 +14,5 @@ class HomepageController < ApplicationController
       redirect_to root_path, notice:"Your message was sent. I will get back to you as soon as possible."
 
   end
+
 end
