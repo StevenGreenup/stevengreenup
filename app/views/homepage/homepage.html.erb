@@ -376,11 +376,11 @@
       						<div class="container">
         						<div class="row top-margin">
         							<div class="col-md-4">
-												<%= image_tag "intprep.png", class:"img-responsive center-block" %>
+											<%= link_to "https://interview-prepp.herokuapp.com/" do %>	<%= image_tag "intprep.png", class:"img-responsive center-block" %> <% end %>
         							</div>
         							<div class="col-md-8">
         								<h3>Interview Prep</h3>
-        								<p>Independent Project <br> <%= link_to "https://interview-prepp.herokuapp.com/", "https://interview-prepp.herokuapp.com/" %>	</p>
+        								<p>Independent Project <br> <%= link_to "Interview Prep", "https://interview-prepp.herokuapp.com/", class:"page-scroll btn custom-btn-2"   %>	</p>
         								<h3>Description -</h3>
 
         								<p>Interview Prep was built to be as an easy, one stop shop to gather information about a company/hiring manager, build a resume, and brush up on common questions/answers before your big day.
@@ -431,11 +431,11 @@
 												<div class="container">
 													<div class="row top-margin">
 														<div class="col-md-4">
-															<%= image_tag "feauxtwitter.png", class:"img-responsive center-block" %>
+															<%= link_to "https://feauxtwitter.herokuapp.com/" do %><%= image_tag "feauxtwitter.png", class:"img-responsive center-block" %> <% end %>
 														</div>
 														<div class="col-md-8">
 															<h3>Feaux Twitter</h3>
-															<p>Independent Project <br> <%= link_to "https://feauxtwitter.herokuapp.com", "https://feauxtwitter.herokuapp.com" %>	</p>
+															<p>Independent Project <br> <%= link_to "Feaux Twitter", "https://feauxtwitter.herokuapp.com", class:"page-scroll btn custom-btn-2"  %>	</p>
 															<h3>Description -</h3>
 
 															<p>Feaux Twitter is a simple twitter application. This project helped me learn about authentication and authorization. This application you're able to follow users and see thier posts. I really enjoyed working on this project.</p>
@@ -482,11 +482,11 @@
 															<div class="container">
 																<div class="row top-margin">
 																	<div class="col-md-4">
-																		<%= image_tag "book.png", class:"img-responsive center-block" %>
+																		<%= link_to "https://thebookemporium.herokuapp.com/" do %><%= image_tag "book.png", class:"img-responsive center-block" %> <% end %>
 																	</div>
 																	<div class="col-md-8">
 																		<h3>Book Emporium</h3>
-																		<p>Independent Project <br> <%= link_to "https://thebookemporium.herokuapp.com/", "https://thebookemporium.herokuapp.com/" %>	</p>
+																		<p>Independent Project <br> <%= link_to "The Book Emporium", "https://thebookemporium.herokuapp.com/", class:"page-scroll btn custom-btn-2" %>	</p>
 																		<h3>Description -</h3>
 
 																		<p>This project helped me learn how to maintain a database. This was my first expeirence with relational databases in PostgreSQL.</p>
@@ -794,7 +794,12 @@
 
 		<!-- Scroll Top -->
 		<div class="scroll-top">
-			<a class="page-scroll" href="#page-top"><span class="ti-angle-up"></span></a>
+
+			<%= link_to "https://github.com/StevenGreenup" do %><%= image_tag "Github.png", class:"social" %><% end %>
+			<%= link_to "https://www.linkedin.com/in/steven-greenup-70b09038" do %><%= image_tag "Linkedin.png", class:"social" %><% end %>
+			<%= link_to "https://twitter.com/GREEEN_UP" do %><%= image_tag "Twitter.png", class:"social" %><% end %>
+			<%= link_to "mailto:greenup.steven@gmail.com" do %><%= image_tag "mail.png", class:"social" %><% end %>
+			<a class="page-scroll" href="#page-top"><i class="glyphicon glyphicon-chevron-up"></i></a>
 		</div>
 		<!-- END: Scroll Top -->
 
