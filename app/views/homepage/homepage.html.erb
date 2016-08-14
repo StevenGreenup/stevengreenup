@@ -83,11 +83,11 @@
 		              	<li>
 		                	<a class="page-scroll" href="#blog">Blog</a>
 		              	</li>
-
+										<% end %>
 		              	<li>
 		                	<a class="page-scroll" href="#contact">Contact</a>
 		              	</li>
-										<% end %>
+
 		            </ul>
 		          </div>
 		        </div>
@@ -734,53 +734,61 @@
 			</div>
 		</section>
 		<!-- END: Blog -->
-
+<% end %>
 		<!-- Contact -->
 		<section id="contact">
 			<div class="container">
+
+				<% if notice %>
+				<div class="alert alert-warning" role="alert">
+					<div class="text-center">
+						<%= notice %>
+					</div>
+
+				</div>
+				<% end %>
+
 				<div class="row sub-icon">
 					<div class="col-md-10 col-md-offset-1 col-md-push-1">
 						<div class="row">
 							<div class="col-sm-4 wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".4s">
-								<h3><span class="ti-location-pin"></span>Address</h3>
-								<p>218A Brick Lane London, E1 6SA</p>
+								<%= link_to "https://twitter.com/GREEEN_UP" do %><h3> <%= image_tag "Twitter0.png", class:"icon" %> Twitter</h3>
+								<p>@GREEEN_up</p><% end %>
 							</div>
 							<div class="col-sm-4 wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".6s">
-								<h3><span class="ti-email"></span>Email</h3>
-								<a href="mailto:info@themehexa.com">info@themehexa.com</a>
+								<h3><span class="glyphicon glyphicon-envelope"></span>Email</h3>
+								<a href="mailto:greenup.steven@gmail.com.com">greenup.steven@gmail.com.com</a>
 							</div>
 							<div class="col-sm-4 wow fadeInDown" data-wow-duration="1.5s" data-wow-delay=".8s">
-								<h3><span class="ti-mobile"></span>Phone</h3>
-								<a href="tel:+441258889063">+44 125 888 9063</a>
+								<h3><span class="glyphicon glyphicon-phone"></span>Phone</h3>
+								<a href="tel:+7134161217">713 416 1217</a>
 							</div>
 						</div>
 					</div>
 				</div>
 				<div class="row top-pad sub-icon">
 					<div class="col-md-8 col-md-offset-2">
-	    				<form class="form-horizontal" method="post" action="email.php">
+
 							<div class="form-group">
 								<div class="col-md-12">
 
-									<!-- Email Confirmation Success -->
-									<p class="confirmation send-success"><span class="ti-check-box"></span>Email sent successfully.</p>
-									<!-- Email Confirmation Error -->
-									<p class="confirmation send-error"><span class="ti-alert"></span>There is a problem sending email ...</p>
+									<%= form_for @contact, url: new_contact_path do |f| %>
+									<%= f.text_field :name, placeholder:"Name", class:"form-control" %>
+									<%= f.text_field :subject, placeholder:"Subject", class:"form-control" %>
+									<%= f.text_field :email, placeholder:"Email", class:"form-control" %>
+									<%= f.text_area :message, placeholder:"Message", class:"form-control" %>
+									<%= f.submit "Submit", class:"btn custom-btn-2 wow fadeInUp" %>
 
-									<input class="form-control" type="text" name="name" placeholder="Name" required="required">
-									<input class="form-control" type="text" name="subject" placeholder="Subject" required="required">
-									<input class="form-control" type="email" name="email" placeholder="Email" required="required">
-									<textarea class="form-control" name="message" rows="4" placeholder="Message" required="required"></textarea>
-									<button type="submit" class="btn custom-btn-2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s">Submit</button>
+									<% end %>
 
 								</div>
 							</div>
-						</form>
+
 					</div>
 				</div>
 			</div>
 		</section>
-		<% end %>
+
 		<!-- END: Contact -->
 
 		<!-- Footer -->
