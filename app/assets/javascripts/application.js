@@ -25,4 +25,5 @@
 //= require animated-jquery
 //= require wow.min.js
 //= require custom
+//= require homepage
 //= require_tree .

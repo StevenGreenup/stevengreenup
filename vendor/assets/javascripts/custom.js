@@ -19,6 +19,16 @@ jQuery(document).ready(function() {
 			$(".header-img").height($(window).height());
 	});
 
+
+  jQuery(window).ready(function() {
+      jQuery("a .social").on("mouseover", function() {
+          jQuery(this).animate({
+              'top': '100px',
+
+          }, 100);
+      });
+  });
+
     //----------------------------------------------------------------
 
     // Skills progress bar
@@ -173,5 +183,7 @@ jQuery(document).ready(function() {
     });
 
     //----------------------------------------------------------------
+
+
 
 });
