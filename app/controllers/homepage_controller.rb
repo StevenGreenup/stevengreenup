@@ -1,6 +1,9 @@
 class HomepageController < ApplicationController
   def homepage
     @contact = Contact.new
+    @blogs = Blog.all.last(3)
+    @user = User.find_by id: params[:id]
+    @blog = Blog.find_by id: params[:id]
   end
 
 

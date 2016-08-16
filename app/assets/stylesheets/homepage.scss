@@ -12,3 +12,24 @@
   width: 20px;
   height: 20px;
 }
+
+.tags{
+  display:flex;
+ flex-direction: row;
+ flex-wrap: nowrap;
+ justify-content: center;
+ align-content: center;
+ align-items: center;
+ .tag{
+   width: auto;
+   border: 0.5px solid #1d1d1d;
+ }
+}
+
+.blog-container{
+  margin: 80px;
+}
+
+.large-blog-info{
+  margin: 25px;
+}

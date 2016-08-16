@@ -1,0 +1,152 @@
+<!-- Navigation -->
+<div id="navigation">
+  <nav class="navbar navbar-default navbar-static-top" id="nav">
+        <div class="container">
+          <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <!-- Brand -->
+            <a class="navbar-brand page-scroll" href="#page-top"><%= image_tag "greenup.png", class:"logo" %></a>
+            <!-- End Brand -->
+          </div>
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                  <%= link_to 'Home', root_path %>
+                </li>
+                <li>
+                <% if @current_user %>
+                <%= link_to "New Blog", new_blog_path %>
+                <% end %>
+                </li>
+
+            </ul>
+          </div>
+        </div>
+    </nav>
+</div>
+<!-- END: Navigation -->
+
+
+
+<div class="blog-container">
+
+
+<% @blogs.each do |b| %>
+<div class="col-md-6 col-sm-12">
+  <div class="blog-img-overlay">
+    <% if b.image.present? %>
+    <%= image_tag b.image, class:"img-responsive center-block img-thumbnail" %>
+      <% else %>
+      <%= image_tag "b_01.jpg", class:"img-responsive center-block img-thumbnail"  %>
+    <% end %>
+  </div>
+  <div class="panel panel-default">
+<div class="panel-heading">
+<h2 class="panel-title"><span class="glyphicon glyphicon-paperclip"></span><%= b.subject %></h2>
+</div>
+<div class="panel-body">
+
+
+
+    <div class="blog-info">
+
+      <div class="border-style">
+        <span class="date"><%= b.created_at %></span>
+      </div>
+      tags :
+      <% b.tags.split(" ").each do |t| %>
+
+      <div class="tags">
+
+        <div class="tag">
+            <%= t %>
+        </div>
+
+      </div>
+
+      <% end %>	<br>
+      <%= b.user.name %>
+      <p><%= b.body.truncate(100) %></p>
+    </div>
+    <div class="border-style">
+      <%= link_to "Read more", "#", data: {toggle: "modal", target: "#Blog#{b.id}"} %>
+      </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+<!-- Blog1 fullscreen modal -->
+<div id="Blog<%= b.id %>" class="modal fade modal-fullscreen force-fullscreen" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-title">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h2><%= b.subject %> - tags: <%= b.tags %></h2>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-body">
+
+        <div class="container">
+          <div class="row top-margin">
+            <div class="col-md-12">
+              <% if b.image.present? %>
+              <%= image_tag "b.image", class:"img-responsive center-block img-thumbnail" %>
+              <% else %>
+              <%= image_tag "b_01.jpg", class:"img-responsive center-block img-thumbnail"  %>
+              <% end %>
+
+            </div>
+            <div class="col-md-12">
+
+              <br>
+              <br>
+
+              <p><%= b.body %></p>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <button type="button" class="btn custom-btn-2 pull-left" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END: Blog1 fullscreen modal -->
+
+
+
+
+
+
+
+<% end %>
+
+</div>

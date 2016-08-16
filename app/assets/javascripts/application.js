@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require jquery-1.11.1.min
+//= require homepage
 //= require bootstrap.min
 //= require jquery.easing.1.3.min
 //= require appear.js
@@ -25,5 +26,4 @@
 //= require animated-jquery
 //= require wow.min.js
 //= require custom
-//= require homepage
 //= require_tree .
