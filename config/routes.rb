@@ -14,6 +14,5 @@ Rails.application.routes.draw do
   post "sign_in" => "sessions#create"
   delete "sign_in" => "sessions#delete"
 
-  get "registration" => "users#new",  as: :new_user
-  post "registration" => "users#create", as: :create_user
+
 end
