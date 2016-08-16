@@ -722,7 +722,7 @@
 				<div class="col-md-4">
 					<div class="blog-img-overlay">
 						<% if b.image.present? %>
-						<a href="#"><%= image_tag b.image, class:"img-responsive center-block img-thumbnail" %></a>
+						<%= image_tag b.image, class:"img-responsive center-block img-thumbnail blogimage" %>
 					<% else %>
 						<%= image_tag "b_01.jpg", class:"img-responsive center-block img-thumbnail"  %>
 						<% end %>
@@ -740,17 +740,17 @@
 									<span class="date"><%= b.created_at %></span>
 								</div>
 								tags :
-								<% b.tags.split(" ").each do |t| %>
+
 
 								<div class="tags">
-
+									<% b.tags.split(" ").each do |t| %>
 									<div class="tag">
 										<%= t %>
 									</div>
-
+									<% end %>
 								</div>
 
-								<% end %>
+
 								<br>
 								<%= b.user.name %>
 								<p><%= b.body.truncate(100) %></p>
@@ -791,7 +791,7 @@
 									<div class="row top-margin">
 										<div class="col-md-12">
 											<% if b.image.present? %>
-											<%= image_tag "b.image", class:"img-responsive center-block img-thumbnail" %>
+											<%= image_tag b.image, class:"img-responsive center-block img-thumbnail" %>
 											<% else %>
 											<%= image_tag "b_01.jpg", class:"img-responsive center-block img-thumbnail"  %>
 											<% end %>
