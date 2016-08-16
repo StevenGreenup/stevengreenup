@@ -791,12 +791,13 @@
 									<div class="row top-margin">
 										<div class="col-md-12">
 											<% if b.image.present? %>
-											<%= image_tag b.image, class:"img-responsive center-block img-thumbnail" %>
+											<%= image_tag b.image, class:"img-responsive center-block img-thumbnail modalimage" %>
 											<% else %>
 											<%= image_tag "b_01.jpg", class:"img-responsive center-block img-thumbnail"  %>
 											<% end %>
 
 										</div>
+
 										<div class="col-md-12">
 
 											<h3><%= b.subject %> -</h3><br>
@@ -805,6 +806,7 @@
 											<p><%= b.body %></p>
 
 										</div>
+
 									</div>
 								</div>
 
